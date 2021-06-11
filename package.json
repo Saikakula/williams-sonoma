@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "prettier": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "prettier": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "test": "jest --watch",
+    "test:ci": "jest --ci"
   },
   "dependencies": {
     "@emotion/core": "^11.0.0",
@@ -16,8 +18,13 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
     "axios": "^0.21.1",
+    "babel-jest": "^27.0.2",
     "babel-plugin-module-resolver": "^4.1.0",
+    "jest": "^27.0.4",
+    "jsdom": "^16.6.0",
     "next": "10.2.3",
     "react": "17.0.2",
     "react-dom": "17.0.2"
