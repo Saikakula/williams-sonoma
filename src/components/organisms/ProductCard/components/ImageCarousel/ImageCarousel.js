@@ -94,7 +94,7 @@ const ImageCarousel = ({ images }) => {
    * handlers
    */
 
-  const updateImageIndex = () => {
+  function updateImageIndex() {
     if (carouselImageRef.current) {
       carouselImageRef.current.classList.add('fade-out-image')
       carouselImageRef.current.classList.remove('fade-in-image')

@@ -32,11 +32,11 @@ const SearchButton = styled.button`
   color: #fff;
 `
 
-function SearchBar({ defaultValue, onSearch, ...restProps }) {
+function SearchBar({ defaultValue = '', onSearch, ...restProps }) {
   /**
    * state
    */
-  const [searchQuery, setSearchQuery] = useState('')
+  const [searchQuery, setSearchQuery] = useState(defaultValue)
 
   /**
    * event handlers
@@ -64,7 +64,6 @@ function SearchBar({ defaultValue, onSearch, ...restProps }) {
     <SearchBarContainer {...restProps}>
       <SearchInput
         placeholder="What are you looking for?"
-        defaultValue={defaultValue}
         value={searchQuery}
         onChange={handleSearchInputChange}
         onKeyDown={handleSearchInputEnterPressed}
