@@ -1,0 +1,24 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    "@emotion",
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@components": "./src/components",
+          "@atoms": "./src/components/atoms",
+          "@molecules": "./src/components/molecules",
+          "@organisms": "./src/components/organisms",
+          "@templates": "./src/components/templates",
+          "@hooks": "./src/hooks",
+          "@contexts": "./src/contexts",
+          "@services": "./src/services",
+          "@utils": "./src/utils",
+          "@styles": "./src/styles"
+        }
+      }
+    ],
+    "macros"
+  ]
+}

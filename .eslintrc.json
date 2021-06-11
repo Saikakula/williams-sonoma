@@ -1,0 +1,71 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@components", "./src/components"],
+          ["@atoms", "./src/components/atoms"],
+          ["@molecules", "./src/components/molecules"],
+          ["@organisms", "./src/components/organisms"],
+          ["@templates", "./src/components/templates"],
+          ["@hooks", "./src/hooks"],
+          ["@config", "./src/config"],
+          ["@helpers", "./src/helpers"],
+          ["@contexts", "./src/contexts"],
+          ["@services", "./src/services"],
+          ["@utils", "./src/utils"],
+          ["@styles", "./src/styles"]
+        ],
+        "extensions": [".js", ".jsx", ".json"]
+      }
+    }
+  },
+  "plugins": ["react"],
+  "rules": {
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }], // Use our .prettierrc file as source
+    "semi": "off",
+    "react/jsx-fragments": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "indent": "off",
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "object-curly-newline": "warn",
+    "max-len": "off",
+    "camelcase": "off",
+    "no-console": "error",
+
+    //! Mandatery
+    "react-hooks/exhaustive-deps": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-autofocus": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/interactive-supports-focus": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "no-unused-vars": "off"
+  }
+}
